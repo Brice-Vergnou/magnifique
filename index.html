@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Brice</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, lime, magenta, cyan, yellow);
+            animation: backgroundChange 5s infinite;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            color: #FF00FF;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        @keyframes backgroundChange {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        h1 {
+            color: yellow;
+            text-shadow: 2px 2px green;
+            font-size: 4em;
+            margin-top: 50px;
+        }
+
+        .scrolling-text {
+            font-size: 0.8em;
+            color: pink;
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+            animation: scroll 10s linear infinite;
+        }
+
+        @keyframes scroll {
+            from {transform: translateX(100%);}
+            to {transform: translateX(-100%);}
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% {transform: rotate(0deg);}
+            100% {transform: rotate(360deg);}
+        }
+
+        .section {
+            background: url('https://via.placeholder.com/150') repeat;
+            color: #000;
+            font-size: 1.5em;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 3em;
+            letter-spacing: 5px;
+            margin-bottom: 30px;
+        }
+
+        .section p {
+            font-size: 1em;
+            text-align: justify;
+            color: red;
+            line-height: 1.5em;
+            margin: 0 10px;
+            animation: shake 0.5s infinite;
+        }
+
+        @keyframes shake {
+            0% {transform: translate(1px, 1px) rotate(0deg);}
+            10% {transform: translate(-1px, -2px) rotate(-1deg);}
+            20% {transform: translate(-3px, 0px) rotate(1deg);}
+            30% {transform: translate(3px, 2px) rotate(0deg);}
+            40% {transform: translate(1px, -1px) rotate(1deg);}
+            50% {transform: translate(-1px, 2px) rotate(-1deg);}
+            60% {transform: translate(-3px, 1px) rotate(0deg);}
+            70% {transform: translate(3px, 1px) rotate(-1deg);}
+            80% {transform: translate(-1px, -1px) rotate(1deg);}
+            90% {transform: translate(1px, 2px) rotate(0deg);}
+            100% {transform: translate(1px, -2px) rotate(-1deg);}
+        }
+
+        .section-academic, .section-skills {
+            background: radial-gradient(circle, red, blue, green);
+            color: white;
+        }
+
+        .skills-bar {
+            background-color: #00FFFF;
+            width: 80%;
+            margin: 20px auto;
+            padding: 10px;
+            color: #FF00FF;
+            animation: flash 1s infinite;
+        }
+
+        @keyframes flash {
+            0% {background-color: #00FFFF;}
+            50% {background-color: #FF00FF;}
+            100% {background-color: #00FFFF;}
+        }
+
+        .project {
+            background: url('https://via.placeholder.com/200') center center no-repeat;
+            background-size: cover;
+            height: 300px;
+            animation: glitch 2s infinite;
+        }
+
+        @keyframes glitch {
+            0% {transform: translate(0, 0);}
+            20% {transform: translate(-2px, 2px);}
+            40% {transform: translate(2px, -2px);}
+            60% {transform: translate(-2px, -2px);}
+            80% {transform: translate(2px, 2px);}
+            100% {transform: translate(0, 0);}
+        }
+
+        .contact-form {
+            background-color: #FFFF00;
+            padding: 50px;
+            margin: 50px;
+            font-size: 1.2em;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 20px;
+            font-size: 1.2em;
+            color: lime;
+            background-color: pink;
+            border: 5px solid blue;
+        }
+
+        .contact-form button {
+            padding: 15px 30px;
+            font-size: 1.5em;
+            color: black;
+            background-color: cyan;
+            border: 3px solid magenta;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenue sur le Portfolio de Brice !</h1>
+    <div class="scrolling-text">Je m'appelle Brice, j'ai 20 ans, et je suis étudiant à l'ENSEEIHT après la prépa des INP de Bordeaux. Je veux devenir ingénieur en IA !</div>
+    <img src="https://avatars.githubusercontent.com/u/86613710?v=4" alt="Photo de Brice" class="profile-pic">
+
+    <div class="section section-about">
+        <h2>À propos de moi</h2>
+        <p>Je m'appelle Brice, j'ai 20 ans, et je suis étudiant à l'ENSEEIHT après la prépa des INP de Bordeaux. Je veux devenir ingénieur en IA !</p>
+    </div>
+
+    <div class="section section-academic">
+        <h2>Parcours Académique</h2>
+        <p>ENSEEIHT (Toulouse)</p>
+        <p>Prépa INP Bordeaux</p>
+    </div>
+
+    <div class="section section-skills">
+        <h2>Compétences en IA</h2>
+        <div class="skills-bar">Python</div>
+        <div class="skills-bar">Machine Learning</div>
+        <div class="skills-bar">Deep Learning</div>
+    </div>
+
+    <div class="section section-projects">
+        <h2>Projets</h2>
+        <div class="project"></div>
+        <p>Projet 1 : Ce beau site</p>
+    </div>
+
+    <div class="section section-contact">
+        <h2>Contact</h2>
+        <div class="contact-form">
+            <input type="text" placeholder="Nom">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Message"></textarea>
+            <button type="submit">Envoyer</button>
+        </div>
+    </div>
+</body>
+</html>
